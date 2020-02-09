@@ -1,8 +1,8 @@
-Exercicios de Revisão
+Exercicios de Revisï¿½o
 
-1)Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.
+1)Fazer um programa para ler um nï¿½mero inteiro, e depois dizer se este nï¿½mero ï¿½ negativo ou nï¿½o.
 
-Correção
+CorreÃ§ao
 import java.util.Scanner;
 
 public class exer1 {
@@ -33,9 +33,9 @@ public class exer1 {
 
 ----------------------------------------------------------------------------------------------------------------
 
-2)Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar. 
+2)Fazer um programa para ler um nï¿½mero inteiro e dizer se este nï¿½mero ï¿½ par ou ï¿½mpar. 
 
-Correção
+Correï¿½ï¿½o
 import java.util.Scanner;
 
 
@@ -70,7 +70,7 @@ public class exer2 {
 
 While
 
-1)Escreva um programa que repita a leitura de uma senha até que ela seja válida. Para cada leitura de senha incorreta informada, escrever a mensagem "Senha Invalida". Quando a senha for informada corretamente deve ser impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta é o valor 2002.
+1)Escreva um programa que repita a leitura de uma senha atï¿½ que ela seja vï¿½lida. Para cada leitura de senha incorreta informada, escrever a mensagem "Senha Invalida". Quando a senha for informada corretamente deve ser impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta ï¿½ o valor 2002.
 
 import java.util.Scanner;
 
@@ -155,7 +155,7 @@ public class Vetor01 {
 		// TODO Auto-generated method stub
 		int n[]= {3,2,8,7,5,4};
 		for(int C=0 ;C<=5;C++){
-		System.out.println(" Na posição " + C + " termos o valor " + n[C]);
+		System.out.println(" Na posiï¿½ï¿½o " + C + " termos o valor " + n[C]);
 		}
 	}
 
