@@ -1,6 +1,6 @@
-Exercicios de Revis�o
+Exercicios de Revisão
 
-1)Fazer um programa para ler um n�mero inteiro, e depois dizer se este n�mero � negativo ou n�o.
+1)Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.
 
 Correçao
 import java.util.Scanner;
@@ -31,11 +31,13 @@ public class exer1 {
 
 }
 
+
+
 ----------------------------------------------------------------------------------------------------------------
 
-2)Fazer um programa para ler um n�mero inteiro e dizer se este n�mero � par ou �mpar. 
+2)Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar. 
 
-Corre��o
+Correção
 import java.util.Scanner;
 
 
@@ -70,7 +72,7 @@ public class exer2 {
 
 While
 
-1)Escreva um programa que repita a leitura de uma senha at� que ela seja v�lida. Para cada leitura de senha incorreta informada, escrever a mensagem "Senha Invalida". Quando a senha for informada corretamente deve ser impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta � o valor 2002.
+1)Escreva um programa que repita a leitura de uma senha até que ela seja vélida. Para cada leitura de senha incorreta informada, escrever a mensagem "Senha Invalida". Quando a senha for informada corretamente deve ser impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta é o valor 2002.
 
 import java.util.Scanner;
 
@@ -111,6 +113,116 @@ public exer1 {
 	}
 
 }
+------------------------------------------------------------------------------------------------------
+Desafio 
+
+Faça um algoritmo para ler o Ano de nascimento de uma pessoa e o ano atual, calcular e apresentar a idade e se pessoa é maior ou menor de idade. Repita essa operação até quando o usuário digitar NÃO para pergunta “Deseja calcular a idade de mais uma pessoa?”.
+
+
+import java.util.Scanner;
+public class AnoNascimento {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		int Dn, Da, I;
+		String resposta;
+		do {
+			System.out.println("Digite sua data de nascimento: ");
+			Dn= in.nextInt();
+			
+			System.out.println("Digite a data atual:  ");
+			Da= in.nextInt();
+			
+			I= Da - Dn;
+			
+			System.out.println("Sua idade é: "+I);
+			
+			System.out.println("Deseja calcular novamente?");
+			resposta= in.next();
+			
+			
+		}while(resposta.equalsIgnoreCase("sim"));
+		
+	}
+
+}
+
+OU
+public class DsfMaior {
+ public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int an, aa, id;
+        String re;
+
+        System.out.println("Este programa ira dizer se você é maior ou menor de idade:");
+
+        do {
+        System.out.println("Digite seu ano de nascimento abaixo: ");
+        an = in.nextInt();
+
+        System.out.println("Digite o ano atual abaixo: ");
+        aa = in.nextInt();
+
+        id = aa - an;
+
+        if(id>=18) {
+            System.out.println("A sua idade é "+id+" e você é maior de idade");
+        }else {
+            System.out.println("A sua idade é "+id+" e você é menor de idade");
+        }
+
+        System.out.println("Deseja calcular a idade de mais uma pessoa? (Sim/Não)");
+        re = in.next();
+
+        if(re == "Não") {
+            break;
+        }
+
+        }while(r.equalsIgnoreCase(r = "Sim"));
+
+
+        in.close();
+
+
+    }
+
+}
+OU
+
+import java.util.Scanner;
+public class Exercicio4 {
+	public static void main(String args[]){
+		Scanner in = new Scanner(System.in);
+	  int anoNasc;
+	  int anoAtual;
+	  int idade;
+	  String resp = "Não";
+	  
+     do{
+	  
+	  System.out.println("Digite o ano atual: ");
+	  anoAtual=in.nextInt();
+	  System.out.println("Digite o ano de nascimento: ");
+	  anoNasc=in.nextInt();
+	  
+	  idade = anoAtual-anoNasc;
+	  System.out.println("Idade: "+idade);
+	  
+	  if(idade>=18){
+		  System.out.println("Maior de Idade!");
+	  } else {
+		  System.out.println("Menor de Idade!");
+	  }
+	 
+	  System.out.println("\nQuer continuar?");
+	  resp=in.next();
+     }while(resp.equalsIgnoreCase("Sim"));
+	   
+      in.close();
+	}
+}
+
 
 -------------------------------------------------------------------------------------------------------
 Exercicio 1 Matriz
@@ -144,6 +256,47 @@ notasAlunos[2][3]=7;
 
     }
  }
+ OU
+ public class Matriz {
+
+	
+	public static void main(String[] args) {
+
+		double [][] matriz = new double [3][4];
+		
+		
+		matriz [0][0] = 10.0;
+		matriz [0][1] = 7.0;
+		matriz [0][2] = 9.0;
+		matriz [0][3] = 9.5;
+		
+		matriz [1][0] = 9.0;
+		matriz [1][1] = 8.0;
+		matriz [1][2] = 7.0;
+		matriz [1][3] = 9.0;
+		
+		matriz [2][0] = 8.0;
+		matriz [2][1] = 9.0;
+		matriz [2][2] = 10.0;
+		matriz [2][3] = 7.0;
+		
+		for(int linha=0;linha<matriz.length; linha++ ) {
+			System.out.print("Aluno "+ (linha+1)+" Notas:");
+			
+			for(int coluna=0;coluna<matriz[linha].length;coluna++) {
+				System.out.print(matriz[linha][coluna]);
+
+			}
+			System.out.println();
+		}
+
+		
+		
+		
+
+	}
+
+}
 
 -------------------------------------------------------------------------------------------------------
 
@@ -155,11 +308,9 @@ public class Vetor01 {
 		// TODO Auto-generated method stub
 		int n[]= {3,2,8,7,5,4};
 		for(int C=0 ;C<=5;C++){
-		System.out.println(" Na posi��o " + C + " termos o valor " + n[C]);
+		System.out.println(" Na posição " + C + " termos o valor " + n[C]);
 		}
 	}
 
 }
-		
-
-		
+	
