@@ -1,36 +1,25 @@
 Exercicios de Revisão
 
-1)Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.
-
-Correçao
 import java.util.Scanner;
 
-public class exer1 {
+//1)Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não.
+public class Exercicio01 {
 
-	public static void main(String[] args) {		
-
-		Scanner sc = new Scanner(System.in);
-
-		int N = sc.nextInt();	    
-
-		if (N < 0) {
-
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     //1°PASSO Scanner pois vou precisar usar fazer alguma coisa com a variavel
+		Scanner in = new Scanner(System.in);
+		System.out.println("Digite um número");
+		int numero =in.nextInt();
+		if(numero<0) {
 			System.out.println("NEGATIVO");
-
 		}
-
 		else {
-
-			System.out.println("NAO NEGATIVO");
-
+			System.out.println("POSITIVO");
 		}
-
-		sc.close();
-
 	}
 
 }
-
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -38,30 +27,21 @@ public class exer1 {
 2)Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar. 
 
 Correção
-import java.util.Scanner;
-
-
-public class exer2 {
+public class Exercicio02 {
 
 	public static void main(String[] args) {
-		
-
-		Scanner sc = new Scanner(System.in);
-
-		int N = sc.nextInt();
-	    
-
-		if (N % 2 == 0) {
-
-			System.out.println("PAR");
-
-		}
-
-		else {
-			System.out.println("IMPAR");
-		}
-		sc.close();
-
+		// TODO Auto-generated method stub
+       Scanner in =new Scanner(System.in);
+       System.out.println("Digite um número");
+       //Variavél
+       int numero =in.nextInt();
+       //Decisão
+       if(numero % 2==0) {
+    	   System.out.println("PAR");
+       }
+       else {
+    	   System.out.println("ÍMPAR");
+       }
 	}
 
 }
@@ -76,43 +56,25 @@ While
 
 import java.util.Scanner;
 
-
-
-public exer1 {
-
-
+//Escreva um programa que repita a leitura de uma senha até que ela seja vélida. Para cada leitura de senha incorreta informada, escrever a mensagem "Senha Invalida". Quando a senha for informada corretamente deve ser impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta é o valor 2002.
+public class Exercicio03 {
 
 	public static void main(String[] args) {
-
-
-
-		Scanner sc = new Scanner(System.in);
-
-		
-
-		int senha = sc.nextInt();
-
-		
-
-		while (senha != 2002) {
-
-			System.out.println("Senha Invalida");
-
-			senha = sc.nextInt();
-
-		}
-
-		
-
-		System.out.println("Acesso Permitido");
-
-		
-
-		sc.close();
-
+		// TODO Auto-generated method stub
+		Scanner in =new Scanner(System.in);
+	       System.out.println("Digite um senha:");
+	       int senha =in.nextInt();
+	       //Repetição
+	       
+	       while(senha==2002) {
+	    	   System.out.println("Senha Correta!!!");
+	       }
+	       
+	       System.out.println("Senha Invalida!!!");
 	}
 
 }
+
 ------------------------------------------------------------------------------------------------------
 Desafio 
 
@@ -120,30 +82,26 @@ Faça um algoritmo para ler o Ano de nascimento de uma pessoa e o ano atual, cal
 
 
 import java.util.Scanner;
-public class AnoNascimento {
+
+//Faça um algoritmo para ler o Ano de nascimento de uma pessoa e o ano atual, calcular e apresentar a idade e se pessoa é maior ou menor de idade. Repita essa operação até quando o usuário digitar NÃO para pergunta “Deseja calcular a idade de mais uma pessoa?”.
+public class Exercicio4 {
 
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		
-		int Dn, Da, I;
-		String resposta;
-		do {
-			System.out.println("Digite sua data de nascimento: ");
-			Dn= in.nextInt();
-			
-			System.out.println("Digite a data atual:  ");
-			Da= in.nextInt();
-			
-			I= Da - Dn;
-			
-			System.out.println("Sua idade é: "+I);
-			
-			System.out.println("Deseja calcular novamente?");
-			resposta= in.next();
-			
-			
-		}while(resposta.equalsIgnoreCase("sim"));
-		
+		// TODO Auto-generated method stub
+		Scanner in =new Scanner(System.in);
+	       
+	       //declarar variavel
+	       int Dn,Da,I;
+	       String resposta;
+	       do {
+	    	   System.out.println("Digite ano nascimento:");
+	    	   Dn=in.nextInt();
+	    	   System.out.println("Digite ano atual:");
+	    	   Da =in.nextInt();
+	    	   I =Da- Dn;
+	    	   System.out.println("Sua idade é: " + I);
+	    	   resposta=in.next();
+	       }while(resposta.equalsIgnoreCase("sim"));
 	}
 
 }
